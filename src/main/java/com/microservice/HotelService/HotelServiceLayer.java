@@ -23,7 +23,7 @@ public class HotelServiceLayer implements HotelServiceInterface{
 
 	@Override
 	public HotelEntity getSingleUser(String userid) {
-		HotelEntity singleHotel = hotelRepository.findById(userid).orElseThrow(()-> new ResourceNotFoundException("User", "ID", userid));
+		HotelEntity singleHotel = hotelRepository.findById(userid).orElseThrow(()-> new ResourceNotFoundException("Hotel", "ID", userid));
 		return singleHotel;
 	}
 
