@@ -1,9 +1,15 @@
 package com.microservice.HotelUntility;
 
+import org.springframework.http.HttpStatus;
+
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@Builder
 public class APIResponse {
 
-	public APIResponse() {
-		// TODO Auto-generated constructor stub
-	}
-
+	private String message;
+	private Boolean responseFlag;
+	private HttpStatus status;
 }

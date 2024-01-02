@@ -1,9 +1,25 @@
 package com.microservice.HotelEntity;
 
-public class HotelEntity {
+import org.hibernate.annotations.UuidGenerator;
 
-	public HotelEntity() {
-		// TODO Auto-generated constructor stub
-	}
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+public class HotelEntity {
+	@Id
+	@UuidGenerator
+	private String hotelId;
+	private String hotelName;
+	private String location;
+	private String about;
 
 }
