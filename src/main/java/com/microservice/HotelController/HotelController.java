@@ -29,9 +29,9 @@ public class HotelController {
 		return ResponseEntity.ok(creatdHotel);
 	}
 	//findSingle User
-	@GetMapping(value = "/{userId}")
-	public ResponseEntity<HotelEntity> findUser( @PathVariable String userId){
-		HotelEntity singleHotel = service.getSingleUser(userId);
+	@GetMapping(value = "/{hotelId}")
+	public ResponseEntity<HotelEntity> findUser( @PathVariable String hotelId){
+		HotelEntity singleHotel = service.getSingleUser(hotelId);
 		return ResponseEntity.ok(singleHotel);
 	}
 	
