@@ -14,7 +14,7 @@ public class GlobalExceptionHandler {
 	@ExceptionHandler(ResourceNotFoundException.class)
 	public ResponseEntity<APIResponse> resourceNotFoundException(ResourceNotFoundException ex){
 		String message = ex.getMessage();
-		APIResponse apiResponse = APIResponse.builder().message(message).responseFlag(false).status(HttpStatus.NOT_FOUND).build();
+		APIResponse apiResponse = new  APIResponse(message, false, HttpStatus.NOT_FOUND);
 		return new ResponseEntity<APIResponse>(apiResponse,HttpStatus.NOT_FOUND);
 		
 	}

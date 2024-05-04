@@ -12,4 +12,12 @@ public class APIResponse {
 	private String message;
 	private Boolean responseFlag;
 	private HttpStatus status;
+	
+	public APIResponse(String message, Boolean responseFlag, HttpStatus status) {
+		super();
+		this.message = message;
+		this.responseFlag = responseFlag;
+		this.status = status;
+	}
+	
 }
